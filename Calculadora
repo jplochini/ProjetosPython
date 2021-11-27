@@ -1,0 +1,28 @@
+print("************ Calculadora Python ************")
+
+print('Selecione a operação desejada: \n\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n')
+
+operacao = int(input('Digite sua opção (1, 2, 3 ou 4): '))
+
+while operacao >= 5:
+    print('Digite um valor valido')
+    operacao = int(input('Digite sua opção (1, 2, 3 ou 4): '))
+    
+num1 = float(input('Digite o primeiro valor: '))
+num2 = float(input('Digite o segundo valor: '))
+
+
+if operacao == 1:
+    soma = num1 + num2
+    print(f'{num1} + {num2} = {soma}')
+elif operacao == 2:
+    subtracao = num1 - num2
+    print(f'{num1} - {num2} = {subtracao}')
+elif operacao == 3:
+    multiplicacao = num1 * num2
+    print(f'{num1} * {num2} = {multiplicacao}')
+elif operacao == 4:
+    divisao = num1 / num2
+    print(f'{num1} / {num2} = {divisao}')
+else:
+    print('Digite uma operação válida')
