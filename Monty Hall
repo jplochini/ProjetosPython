@@ -1,0 +1,22 @@
+from random import randint
+
+
+premio = randint(1,3)
+
+escolha_porta = int(input('Escolha o número da porta (1, 2 ou 3): '))
+
+abrir_porta = randint(1,3)
+
+
+while escolha_porta == abrir_porta or premio == abrir_porta:
+    abrir_porta = randint(1,3)
+
+
+
+if escolha_porta != premio or escolha_porta == premio:
+    print(f"Na porta {abrir_porta} tem uma cabra!")
+    escolha_porta = int(input("Escolha se deseja mudar de porta. Qual sua escolha ? "))
+    if escolha_porta == premio:
+        print("Parabens você ganhou um o prêmio!!")
+    else:
+        print("Você perdeu! :(")
