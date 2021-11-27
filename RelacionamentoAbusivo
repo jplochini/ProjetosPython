@@ -1,0 +1,50 @@
+"""Nesse projeto é calculado o quão o seu relacionamento é abusivo. As perguntas foram tiradas do site BuzzFeed"""
+from time import sleep
+print('=-'*50)
+print('Oi! Esse algoritmo te ajuda a identificar se você está em um reelacionamento abusivo!!')
+print('=-'*50)
+sleep(3)
+
+print('Serão feitas 10 perguntas ao todo. As pereguntas foram tiradas do site BuzzFeed, para respondê-las, utilize os números: 2,1,0.5,0')
+print('Cada número corresponde à opção abaixo:\n2-Frequentemente\n1-Às vezes\n0.5-Raramente\n0-Nunca aconteceu')
+sleep(8)
+
+
+lista_perguntas = ['As discussões do casal são de igual para igual ou parece que só um pode ter razão?',
+                    'As agressões são sempre "culpa de outra coisa" como álcool, nervosismo ou pior, do outro que o tirou do sério?',
+                    'A aparência é usada para diminuir e constranger o outro?',
+                    'A pessoa diminuiu e debocha do outro por ter uma opinião diferente?',
+                    'Fatos que aconteceram antes do relacionamento são usados para chantagear e controlar?',
+                    'A pessoa tenta isolar o outro e afastar as pessoas mais próximas?',
+                    'Apresenta constante comportamento de dominação e controle?',
+                    'Se aproveitou da intimidade para registrar momentos possivelmente comprometedores?',
+                    'Tentou tirar o direito à privacidade do outro?',
+                    'Forçou qualquer tipo de relação não consentida?']
+resultados = []
+
+lista_perguntas
+for perguntas in lista_perguntas:
+    print(perguntas)
+    resposta = float(input('Digite sua resposta: '))
+    sleep(1)
+    while resposta > 2:
+        resposta = float(input('Parece que você digitou um número inexistente.Digite uma resposta válida(2, 1, 0.5, 0): '))
+        sleep(1)
+    sleep(1)
+    resultados.append(resposta)
+
+
+somaResultados = sum(resultados)
+
+if somaResultados > 11:
+    sleep(2)
+    print('RESULTADO: Seu relacionamento é abusivo. Peça ajuda!')
+elif somaResultados > 7 and somaResultados <= 10:
+    sleep(2)
+    print('RESULTADO: Seu relacionamento tem MUITOS momentos abusivos. Peça ajuda!')
+elif somaResultados > 4 and somaResultados <= 7:
+    sleep(2)
+    print('RESULTADO: Seu relacionamento tem alguns momentos abusivos. Fique atenta!')
+elif somaResultados <= 4:
+    sleep(2)
+    print('RESULTADO: Aparentemente não há muitos sinais abusivos. Mantenha-se alerta!')   
