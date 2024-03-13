@@ -23,15 +23,3 @@ def pre_processing_images(dataset):
         imagens_pre_processadas.append(image)
 
     return imagens_pre_processadas
-
-diretorio = 'datasets/archive/apenas_testando'
-imagens = pre_processing_images(diretorio)
-
-#visualizar imagens
-import matplotlib.pyplot as plt
-for i in range(5):
-    plt.subplot(1, 5, i+1)
-    plt.imshow(imagens[i], cmap='gray')
-    plt.axis('off')
-
-plt.show()
